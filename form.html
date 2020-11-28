@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form for FCC</title>
+  <link rel="stylesheet" href="css/style-form.css">
+</head>
+
+<body class="page-body">
+  <main class="container">
+    <h1 class="title" id="title">Survey Form freeCodeCamp</h1>
+    <p class="description" id="description">Thank you for taking the time to help us</p>
+    <form class="survey-form" id="survey-form">
+      <div class="survey-form__item-wrapper">
+        <label for="name" id="name-label">Name:</label>
+        <input id="name" type="text" class="survey-form__item-input" placeholder="Please enter your name" required>
+      </div>
+      <div class="survey-form__item-wrapper">
+        <label for="email" id="email-label">Email:</label>
+        <input id="email" type="email" class="survey-form__item-input" placeholder="Please enter your email" required>
+      </div>
+      <div class="survey-form__item-wrapper">
+        <label for="number" id="number-label">Age:</label>
+        <input id="number" type="number" class="survey-form__item-input" placeholder="Please enter your age" min="1"
+          max="50">
+      </div>
+      <div class="survey-form__item-wrapper">
+        <p class="survey-form__item-text">What is your favorite feature of freeCodeCamp?</p>
+        <select name="feature" id="dropdown" class="survey-form__item-dropdown" required>
+          <option value="" selected disabled>Select one below</option>
+          <option value="job">Job</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="survey-form__item-wrapper">
+        <label for=""></label>
+        <input type="checkbox" class="survey-form__item-input" value="">
+        <label for=""></label>
+        <input type="checkbox" class="survey-form__item-input" value="">
+        <label for=""></label>
+        <input type="checkbox" class="survey-form__item-input" value="">
+        <label for=""></label>
+        <input type="checkbox" class="survey-form__item-input" value="">
+      </div>
+      <div class="survey-form__item-wrapper">
+        <label for=""></label>
+        <input type="radio" class="survey-form__item-input" value="">
+        <label for=""></label>
+        <input type="radio" class="survey-form__item-input" value="">
+        <label for=""></label>
+        <input type="radio" class="survey-form__item-input" value="">
+      </div>
+      <div class="survey-form__item-wrapper">
+        <textarea class="survey-form__item-textarea" cols="30" rows="10"></textarea>
+      </div>
+      <button class="survey-form__button" id="submit" type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</html>

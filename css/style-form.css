@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page-body {
+  min-height: 100%;
+  margin: 0;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Arial", sans-serif;
+  color: black;
+}
+
+.container {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  outline: auto; /* delete after ending */
+}
+
+.input {
+  border: 0;
+  outline: none;
+}
