@@ -1,3 +1,7 @@
+:root {
+
+}
+
 *,
 *::before,
 *::after {
@@ -10,8 +14,9 @@
   font-style: normal;
   font-size: 16px;
   line-height: 26px;
-  font-family: "Arial", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: black;
+  background-image: url("../images/background-form.jpg");
 }
 
 .container {
