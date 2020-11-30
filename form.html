@@ -11,8 +11,8 @@
 
 <body class="page-body">
   <main class="container">
-    <h1 class="title" id="title">Survey Form freeCodeCamp</h1>
-    <p class="description" id="description">Thank you for taking the time to help us</p>
+    <h1 class="title text" id="title">Survey Form freeCodeCamp</h1>
+    <p class="description text" id="description">Thank you for taking the time to help us</p>
     <form class="survey-form" id="survey-form">
       <div class="survey-form__item-wrapper">
         <label for="name" id="name-label">Name:</label>
@@ -27,7 +27,7 @@
         <input id="number" type="number" class="survey-form__item-input" placeholder="Please enter your age" min="1" max="50">
       </div>
       <div class="survey-form__item-wrapper">
-        <p class="survey-form__item-text">What is your favorite theme of our podcast?</p>
+        <p class="survey-form__item-text text">What is your favorite theme of our podcast?</p>
         <select name="feature" id="dropdown" class="survey-form__item-dropdown" required>
           <option value="" selected disabled>Select one below</option>
           <option value="job">Truth about HR</option>
@@ -37,24 +37,24 @@
         </select>
       </div>
       <div class="survey-form__item-wrapper">
-        <p class="survey-form__item-text">What is your value of our podcast</p>
+        <p class="survey-form__item-text text">What is your value of our podcast</p>
         <label for="awesome">Awesome</label>
-        <input id="awesome" type="checkbox" class="survey-form__item-input" value="awesome">
+        <input id="awesome" type="checkbox" class="survey-form__item-input--checkbox" value="awesome">
         <label for="very good">Very good</label>
-        <input id="very good" type="checkbox" class="survey-form__item-input" value="very good">
+        <input id="very good" type="checkbox" class="survey-form__item-input--checkbox" value="very good">
         <label for="normal">Normal</label>
-        <input id="normal" type="checkbox" class="survey-form__item-input" value="normal">
+        <input id="normal" type="checkbox" class="survey-form__item-input--checkbox" value="normal">
         <label for="bad">Bad</label>
-        <input id="bad" type="checkbox" class="survey-form__item-input" value="bad">
+        <input id="bad" type="checkbox" class="survey-form__item-input--checkbox" value="bad">
       </div>
       <div class="survey-form__item-wrapper">
-        <p class="survey-form__item-text">Check theme for next podcast</p>
+        <p class="survey-form__item-text text">Check theme for next podcast</p>
         <label for="anger">Anger people</label>
-        <input id="anger" type="radio" class="survey-form__item-input" value="anger" name="next" checked>
+        <input id="anger" type="radio" class="survey-form__item-input--radio" value="anger" name="next" checked>
         <label for="charity">Charity</label>
-        <input id="charity" type="radio" class="survey-form__item-input" name="next" value="charity">
+        <input id="charity" type="radio" class="survey-form__item-input--radio" name="next" value="charity">
         <label for="music">Music for lifetime</label>
-        <input id="music" type="radio" class="survey-form__item-input" name="next" value="music">
+        <input id="music" type="radio" class="survey-form__item-input--radio" name="next" value="music">
       </div>
       <div class="survey-form__item-wrapper">
         <textarea class="survey-form__item-textarea" cols="30" rows="10"></textarea>
@@ -63,6 +63,4 @@
     </form>
   </main>
 </body>
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
 </html>

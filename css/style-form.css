@@ -1,5 +1,6 @@
 :root {
-
+  --basic-white: #ffffff;
+  --basic-bg-color: #C8A2C8;
 }
 
 *,
@@ -8,25 +9,75 @@
   box-sizing: border-box;
 }
 
+.text {
+  padding: 0;
+  margin: 0;
+}
+
 .page-body {
   min-height: 100%;
   margin: 0;
   font-style: normal;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 26px;
   font-family: "PT Sans", sans-serif;
-  color: black;
+  color: var(--basic-white);
   background-image: url("../images/background-form.jpg");
 }
 
 .container {
-  max-width: 900px;
+  max-width: 600px;
   margin-right: auto;
   margin-left: auto;
-  outline: auto; /* delete after ending */
+  background-color: var(--basic-bg-color);
 }
 
 .input {
   border: 0;
   outline: none;
+}
+
+.title {
+  text-align: center;
+  padding-top: 20px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+}
+
+.description {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.survey-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.survey-form__item-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+
+}
+
+.survey-form__item-wrapper label{
+  flex-basis: 100%;
+  padding-bottom: 10px;
+}
+.survey-form__item-input,
+.survey-form__item-dropdown {
+  width: 50%;
+  height: 40px;
+  border: 4px solid transparent;
+  border-radius: 3%;
+  overflow: hidden;
+}
+
+.survey-form__item-input:focus {
+  outline-color: darkgrey;
 }
