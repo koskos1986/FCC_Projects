@@ -1,6 +1,7 @@
 :root {
   --basic-white: #ffffff;
   --basic-bg-color: #C8A2C8;
+  --basic-grey: #A9A9A9;
 }
 
 *,
@@ -62,7 +63,10 @@
   padding-right: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
+}
 
+.survey-form__item-text {
+  flex-basis: 100%;
 }
 
 .survey-form__item-wrapper label{
@@ -80,4 +84,35 @@
 
 .survey-form__item-input:focus {
   outline-color: darkgrey;
+}
+
+.survey-form__item--checkbox {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.survey-form__item--checkbox label {
+  flex-basis: 35%;
+  padding-top: 6px;
+}
+
+.survey-form__item--radio {
+  flex-basis: 50%;
+}
+
+.survey-form__item-textarea {
+  width: 100%;
+  height: 80px;
+  font-family: 'Times New Roman', serif;
+}
+
+.survey-form__button {
+  width: 300px;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+  font: inherit;
+  color: var(--basic-white);
+  background-color: var(--basic-grey);
 }

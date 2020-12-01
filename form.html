@@ -37,27 +37,41 @@
         </select>
       </div>
       <div class="survey-form__item-wrapper">
-        <p class="survey-form__item-text text">What is your value of our podcast</p>
-        <label for="awesome">Awesome</label>
-        <input id="awesome" type="checkbox" class="survey-form__item-input--checkbox" value="awesome">
-        <label for="very good">Very good</label>
-        <input id="very good" type="checkbox" class="survey-form__item-input--checkbox" value="very good">
-        <label for="normal">Normal</label>
-        <input id="normal" type="checkbox" class="survey-form__item-input--checkbox" value="normal">
-        <label for="bad">Bad</label>
-        <input id="bad" type="checkbox" class="survey-form__item-input--checkbox" value="bad">
+        <p class="survey-form__item-text text">What is your like in our podcast?(check one or more)</p>
+        <div class="survey-form__item--checkbox">        
+          <label for="truth">Truth</label>
+          <input id="truth" type="checkbox" class="survey-form__item-input--checkbox" value="truth">
+        </div>
+        <div class="survey-form__item--checkbox">
+          <label for="humour">Humour</label>
+          <input id="humour" type="checkbox" class="survey-form__item-input--checkbox" value="humour">
+        </div>
+        <div class="survey-form__item--checkbox">
+          <label for="music">Music</label>
+          <input id="music" type="checkbox" class="survey-form__item-input--checkbox" value="music">
+        </div>
+        <div class="survey-form__item--checkbox">
+          <label for="voice">Voice</label>
+          <input id="voice" type="checkbox" class="survey-form__item-input--checkbox" value="voice">
+        </div>
       </div>
       <div class="survey-form__item-wrapper">
         <p class="survey-form__item-text text">Check theme for next podcast</p>
-        <label for="anger">Anger people</label>
-        <input id="anger" type="radio" class="survey-form__item-input--radio" value="anger" name="next" checked>
-        <label for="charity">Charity</label>
-        <input id="charity" type="radio" class="survey-form__item-input--radio" name="next" value="charity">
-        <label for="music">Music for lifetime</label>
-        <input id="music" type="radio" class="survey-form__item-input--radio" name="next" value="music">
+        <div class="survey-form__item--radio">
+          <input id="anger" type="radio" class="survey-form__item-input--radio" value="anger" name="next" checked>
+          <label for="anger">Anger people</label>        
+        </div>
+        <div class="survey-form__item--radio">
+          <input id="charity" type="radio" class="survey-form__item-input--radio" name="next" value="charity">
+          <label for="charity">Charity</label>
+        </div>
+        <div class="survey-form__item--radio">
+          <input id="music" type="radio" class="survey-form__item-input--radio" name="next" value="music">
+          <label for="music">Music for lifetime</label>
+        </div>
       </div>
       <div class="survey-form__item-wrapper">
-        <textarea class="survey-form__item-textarea" cols="30" rows="10"></textarea>
+        <textarea class="survey-form__item-textarea" cols="30" rows="10" placeholder="Please enter your message"></textarea>
       </div>
       <button class="survey-form__button" id="submit" type="submit">Submit</button>
     </form>
