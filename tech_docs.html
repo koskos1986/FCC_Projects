@@ -9,25 +9,22 @@
 </head>
 <body>
   <nav class="navigation" id="navbar">
-    <header class="navigation__header">What is JavaScript&</header>
+    <header class="navigation__header">What is JavaScript?</header>
     <ul class="navigation__list">
       <li class="navigation__list-item">
-        <a href="" class="navigation__list-link nav-link" id="#A_high-level_definition">A high-level definition</a>
+        <a href="#A_high-level_definition" class="navigation__list-link nav-link" id="#A_high-level_definition">A high-level definition</a>
       </li>
       <li class="navigation__list-item">
-        <a href="" class="navigation__list-link nav-link" id="#So_what_can_it_really_do?">So what can it really do?</a>
+        <a href="#So_what_can_it_really_do?" class="navigation__list-link nav-link" id="#So_what_can_it_really_do?">So what can it really do?</a>
       </li>
       <li class="navigation__list-item">
-        <a href="" class="navigation__list-link nav-link" id="#What_is_JavaScript_doing_on_your_page?">What is JavaScript doing on your page?</a>
+        <a href="#How_do_you_add_JavaScript_to_your_page?" class="navigation__list-link nav-link" id="#How_do_you_add_JavaScript_to_your_page?">How do you add JavaScript to your page?</a>
       </li>
       <li class="navigation__list-item">
-        <a href="" class="navigation__list-link nav-link" id="#How_do_you_add_JavaScript_to_your_page?">How do you add JavaScript to your page?</a>
+        <a href="#Comments" class="navigation__list-link nav-link" id="#Comments">Comments</a>
       </li>
       <li class="navigation__list-item">
-        <a href="" class="navigation__list-link nav-link" id="#Comments">Comments</a>
-      </li>
-      <li class="navigation__list-item">
-        <a href="" class="navigation__list-link nav-link" id="#Summary">Summary</a>
+        <a href="#Summary" class="navigation__list-link nav-link" id="#Summary">Summary</a>
       </li>
     </ul>
   </nav>
@@ -90,27 +87,131 @@
           </li>
         </ul>
       </p>
-      <p class="main-section__text"></p>
-    </section>
-    <section class="main-section" id="What_is_JavaScript_doing_on_your_page?">
-      <header class="main-section__header">What is JavaScript doing on your page?</header>
-      <p class="main-section__text"></p>
-      <p class="main-section__text"></p>
+      <p class="main-section__text">
+        What is even more exciting however is the functionality built on top of the client-side JavaScript language.
+        So-called Application Programming Interfaces (APIs) provide you with extra superpowers to use in your JavaScript code.
+        APIs are ready-made sets of code building blocks that allow a developer to implement programs that would otherwise be
+        hard or impossible to implement. They do the same thing for programming that ready-made furniture kits do for
+        home building — it is much easier to take ready-cut panels and screw them together to make a bookshelf than it is to work out
+        the design yourself, go and find the correct wood, cut all the panels to the right size and shape,
+        find the correct-sized screws, and then put them together to make a bookshelf.
+      </p>
+      <p class="main-section__text">
+        Browser APIs are built into your web browser, and are able to expose data from the surrounding computer environment,
+        or do useful complex things. For example:
+        <ul class="main-section__text-list list">
+          <li class="main-section__text-list-item">
+            The DOM (Document Object Model) API allows you to manipulate HTML and CSS, creating, removing and changing HTML,
+            dynamically applying new styles to your page, etc. Every time you see a popup window appear on a page,
+            or some new content displayed (as we saw above in our simple demo) for example, that's the DOM in action.
+          </li>
+          <li class="main-section__text-list-item">
+            The Geolocation API retrieves geographical information. This is how Google Maps is able to find your location
+            and plot it on a map.
+          </li>
+          <li class="main-section__text-list-item">
+            The Canvas and WebGL APIs allow you to create animated 2D and 3D graphics. People are doing some amazing things
+            using these web technologies —see Chrome Experiments and webglsamples.
+          </li>
+          <li class="main-section__text-list-item">
+            Audio and Video APIs like HTMLMediaElement and WebRTC allow you to do really interesting things with multimedia,
+            such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's
+            computer (try our simple Snapshot demo to get the idea).
+          </li>
+        </ul>
+      </p>
+      <p class="main-section__text">There's a lot more available, too! However, don't get over excited just yet. You won't be able to build the next Facebook,
+        Google Maps, or Instagram after studying JavaScript for 24 hours — there are a lot of basics to cover first. And that's
+        why you're here — let's move on!</p>
     </section>
     <section class="main-section" id="How_do_you_add_JavaScript_to_your_page?">
       <header class="main-section__header">How do you add JavaScript to your page?</header>
-      <p class="main-section__text"></p>
-      <p class="main-section__text"></p>
+      <p class="main-section__text">
+        JavaScript is applied to your HTML page in a similar manner to CSS. Whereas CSS uses link elements to apply external
+        stylesheets and style elements to apply internal stylesheets to HTML, JavaScript only needs one friend in
+        the world of HTML — the script element. Let's learn how this works.
+        <ol class="main-section__text-list list">
+          <li class="main-section__text-list-item">
+            First of all, make a local copy of our example file apply-javascript.html. Save it in a directory somewhere sensible.
+          </li>
+          <li class="main-section__text-list-item">
+            Open the file in your web browser and in your text editor. You'll see that the HTML creates a simple web page
+            containing a clickable button.
+          </li>
+          <li class="main-section__text-list-item">
+            Next, go to your text editor and add the following in your head — just before your closing </head> tag:
+            <code>script
+
+              // JavaScript goes here
+
+            script</code>
+          </li>
+          <li class="main-section__text-list-item">
+            Now we'll add some JavaScript inside our script element to make the page do something more interesting —
+            add the following code just below the "// JavaScript goes here" line:
+            <code>
+              document.addEventListener("DOMContentLoaded", function() {
+                function createParagraph() {
+                  let para = document.createElement('p');
+                  para.textContent = 'You clicked the button!';
+                  document.body.appendChild(para);
+                }
+
+                const buttons = document.querySelectorAll('button');
+
+                for(let i = 0; i < buttons.length ; i++) {
+                  buttons[i].addEventListener('click', createParagraph);
+                }
+              });
+            </code>
+          </li>
+          <li class="main-section__text-list-item">
+            Save your file and refresh the browser — now you should see that when you click the button,
+            a new paragraph is generated and placed below.
+          </li>
+        </ol>
+      </p>
     </section>
     <section class="main-section" id="Comments">
       <header class="main-section__header">Comments</header>
-      <p class="main-section__text"></p>
+      <p class="main-section__text">
+        As with HTML and CSS, it is possible to write comments into your JavaScript code that will be ignored by the browser,
+        and exist simply to provide instructions to your fellow developers on how the code works (and you, if you come back
+        to your code after six months and can't remember what you did). Comments are very useful, and you should use them often,
+        particularly for larger applications. There are two types:
+        <ul class="main-section__text-list list">
+          <li class="main-section__text-list-item">
+            A single line comment is written after a double forward slash (//), e.g.
+            <code>
+              // I am a comment
+            </code>
+          </li>
+          <li class="main-section__text-list-item">
+            A multi-line comment is written between the strings /* and */, e.g
+            <code>
+              /*
+                I am also
+                a comment
+              */
+            </code>
+          </li>
+        </ul>
+      </p>
       <p class="main-section__text"></p>
     </section>
     <section class="main-section" id="Summary">
       <header class="main-section__header">Summary</header>
-      <p class="main-section__text"></p>
-      <p class="main-section__text"></p>
+      <p class="main-section__text">
+        So there you go, your first step into the world of JavaScript. We've begun with just theory,
+        to start getting you used to why you'd use JavaScript and what kind of things you can do with it.
+        Along the way, you saw a few code examples and learned how JavaScript fits in with the rest of the code on your website,
+        amongst other things.
+      </p>
+      <p class="main-section__text">
+        JavaScript may seem a bit daunting right now, but don't worry — in this course, we will take you through it in simple steps
+        that will make sense going forward. In the next article, we will plunge straight into the practical,
+        getting you to jump straight in and build your own JavaScript examples.
+      </p>
     </section>
   </main>
 </body>
